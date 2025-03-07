@@ -1,9 +1,10 @@
 # workflow's name
+# ci = continuous integration -> automation after pull request's opened
 name: ci
 
 # when the workflow should run
 on:
-  pull_request:
+  pull_request: # run this when I open pull request
     branches: [main]
 
 # list of jobs workflow has to do (only have one job now)
