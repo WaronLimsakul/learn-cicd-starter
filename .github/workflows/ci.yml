@@ -1,0 +1,25 @@
+# workflow's name
+name: ci
+
+# when the workflow should run
+on:
+  pull_request:
+    branches: [main]
+
+# list of jobs workflow has to do (only have one job now)
+jobs:
+  tests:
+    name: Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.23.0"
+
+      - name: Test auth package
+        run: go test -cover ./...
