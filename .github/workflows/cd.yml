@@ -1,4 +1,4 @@
-# cd = continuous deployment -> automation after the code got merged
+# cd = continuous delivery -> automation after the code got merged
 name: cd
 
 on:
